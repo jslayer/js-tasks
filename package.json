@@ -22,6 +22,7 @@
     "karma-coffee-preprocessor": "0.0.3",
     "karma-phantomjs-launcher": "0.0.2",
     "karma": "~0.9.6",
-    "karma-mocha": "0.0.4"
+    "karma-mocha": "0.0.4",
+    "karma-chai": "git+https://github.com/xdissent/karma-chai.git"
   }
 }
