@@ -1,3 +1,3 @@
-function extend(base, px, sx) {
+function extend(P, px, sx){
 
 }
