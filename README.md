@@ -1,5 +1,11 @@
 #JS tasks
 
+## Quest
+
+* [![Build Status](https://travis-ci.org/jslayer/js-tasks.png?branch=master)](https://travis-ci.org/jslayer/js-tasks)
+* Your fork should change it to green one
+* Profit!!!
+
 ## How to run
 
 Before starting - make sure that nodejs (prefered v0.10.12) & npm is installed.
