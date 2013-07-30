@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
+    "start": "./node_modules/.bin/karma start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,7 @@
     "karma-requirejs": "0.0.3",
     "karma-coffee-preprocessor": "0.0.3",
     "karma-phantomjs-launcher": "0.0.2",
-    "karma": "~0.9.6"
+    "karma": "~0.9.6",
+    "karma-mocha": "0.0.4"
   }
 }
