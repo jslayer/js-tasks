@@ -4,7 +4,7 @@
 
 Before starting - make sure that nodejs(prefered v0.10.15) & npm is installed.
 
-Use [nvm](github-nvm) to easely switch between nodejs versions.
+Use [nvm][github-nvm] to easely switch between nodejs versions.
 
     $npm install
     $npm start
