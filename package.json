@@ -1,14 +1,14 @@
 {
-  "name": "js-tasks-tdd",
-  "version": "0.0.0",
+  "name": "js-tasks",
+  "version": "0.0.1",
   "description": "",
   "scripts": {
     "start": "./node_modules/.bin/karma start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/karma start --single-run"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@bitbucket.org/jslayer/js-tasks-tdd.git"
+    "url": "git@github.com:jslayer/js-tasks.git"
   },
   "author": "",
   "license": "BSD",
