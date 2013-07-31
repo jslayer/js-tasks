@@ -1,6 +1,6 @@
 'use strict';
 
-describe('extend', function(){
+describe('extend.js', function(){
     var A, B, a, b;
 
     beforeEach(function(){
