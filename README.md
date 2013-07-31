@@ -3,7 +3,7 @@
 ## Quest
 
 * [![Build Status](https://travis-ci.org/jslayer/js-tasks.png?branch=master)](https://travis-ci.org/jslayer/js-tasks)
-* Your fork should change it to green one
+* Your pull request should change it to green one
 * Profit!!!
 
 ## How to run
