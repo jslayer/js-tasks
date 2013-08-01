@@ -17,6 +17,7 @@ Use [nvm][github-nvm] to easily switch between nodejs versions.
 
 ## Release log
 
+* 0.0.2 - add: `strings-basic`
 * 0.0.1 - add: `extend` task
 
 [github-nvm]:https://github.com/creationix/nvm
