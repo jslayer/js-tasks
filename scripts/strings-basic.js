@@ -5,7 +5,7 @@ var StringsBasic = {
      * @returns {number}
      */
     subCount : function(str, sub) {
-        return str.toLowerCase().indexOf(sub.toLowerCase()) + 1;
+        return str.toLowerCase().split(sub.toLowerCase()).length - 1;
     },
 
     /**
