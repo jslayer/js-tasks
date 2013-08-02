@@ -36,13 +36,23 @@ var StringsBasic = {
                 result.push(array[i]);
             }
         }
-    return result;
+        return result;
     },
     /**
      * @param {string} str
      * @returns {Array.<string>}
      */
-    wordsBeginCapital : function(str) {},
+    wordsBeginCapital : function(str) {
+        var array = str.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(" ");
+        var result = [];
+        for (var i in array) {
+            var letter = array[i].substr(1).toUpperCase();
+            if (letter == letter.toUpperCase()) {
+                result.push(array[i]);
+            }
+        }
+        return result;
+    },
     /**
      * @param {string} str
      * @returns {boolean}
