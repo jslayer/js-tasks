@@ -28,7 +28,16 @@ var StringsBasic = {
      * @param {string} sub
      * @returns {Array.<string>}
      */
-    wordsNotContains : function(str, sub) {},
+    wordsNotContains : function(str, sub) {
+        var array = str.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(" ");
+        var result = [];
+        for (var i in array) {
+            if (array[i].toLowerCase().search(sub.toLowerCase()) == -1) {
+                result.push(array[i]);
+            }
+        }
+    return result;
+    },
     /**
      * @param {string} str
      * @returns {Array.<string>}
