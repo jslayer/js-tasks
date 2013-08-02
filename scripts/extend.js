@@ -1,5 +1,5 @@
 function extend(P, px, sx){
-  var obj = new P();
+  var obj;
   
   obj = function(){
     this.initialize();
