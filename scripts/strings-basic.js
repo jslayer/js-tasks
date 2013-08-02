@@ -13,7 +13,18 @@ var StringsBasic = {
      * @param {string} sub
      * @returns {Array,<string>}
      */
-    wordsContains : function(str, sub) {},
+    wordsContains : function(str, sub) {
+        var array = str.split(" ");
+        var result = [];
+        var obj;
+        for (var i in array) {
+        if (array[i].search(sub) != -1) {
+            obj = array[i].replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '_');
+            result.push(obj);
+        }
+    }
+    return result;
+    },
     /**
      * @param {string} str
      * @param {string} sub
