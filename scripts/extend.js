@@ -10,6 +10,7 @@ function extend(P, px, sx){
   obj.prototype.methodB = px.methodB;
   obj.sMethodA = P.sMethodA;  
   obj.sMethodB = sx.sMethodB;  
+  //
   
 return obj;
 }
