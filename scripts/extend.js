@@ -5,6 +5,7 @@ function extend(P, px, sx){
   obj.prototype.initialize = function () {
 	this.value = px.value;
   };
+  obj.prototype = new P();
   obj.prototype.methodA = P.methodA;
   obj.prototype.methodB = px.methodB;
   obj.sMethodA = P.sMethodA;  
