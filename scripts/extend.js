@@ -1,4 +1,5 @@
 function extend(P, px, sx){
+    var result;
     var obj = function() {
         P.call(this);
     };
@@ -8,5 +9,5 @@ function extend(P, px, sx){
     obj.prototype.methodB = function () { px.methodB.call(this); };
     obj.prototype.sMethodB = function () { sx.sMethodB.call(this); };
 
-    return obj;
+    return result = new obj();
 }
