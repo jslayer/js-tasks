@@ -67,7 +67,7 @@ describe('strings-basic.js', function(){
             assert.deepEqual(StringsBasic.wordsNotContains(
                 'Lorem ipsum dolor', 'or'
             ), [
-                'Lorem', 'ipsum'
+                'ipsum'
             ]);
 
             assert.deepEqual(StringsBasic.wordsNotContains(
