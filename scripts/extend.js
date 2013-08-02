@@ -1,11 +1,12 @@
 function extend(P, px, sx){
   var obj = new P();
   
-  obj = function () {
-	this.value = px.value();
+  obj = function(){
+    this.initialize();
   };
   
-  obj.prototype = new P();
+  obj.prototype.initialize = px.initialize;
+
   obj.prototype.methodA = P.methodA;
   obj.prototype.methodB = px.methodB;
   obj.sMethodA = P.sMethodA;  
