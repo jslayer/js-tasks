@@ -18,12 +18,12 @@ var StringsBasic = {
         var result = [];
         var obj;
         for (var i in array) {
-        if (array[i].search(sub) != -1) {
-            obj = array[i].replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '_');
-            result.push(obj);
+            if (array[i].toLowerCase().search(sub.toLowerCase()) != -1) {
+                obj = array[i].replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '_');
+                result.push(obj);
+            }
         }
-    }
-    return result;
+        return result;
     },
     /**
      * @param {string} str
