@@ -1,6 +1,8 @@
 function extend(P, px, sx){
   var obj;
   
+  obj.prototype = new P();
+  
   obj = function(){
     this.initialize();
   };
