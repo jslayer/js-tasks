@@ -2,7 +2,7 @@ function extend(P, px, sx){
   var obj = new P();
   
   obj = function () {
-	this.value = 'Test';
+	this.value = px[0];
   };
   
   obj.prototype = new P();
