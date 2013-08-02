@@ -116,7 +116,7 @@ describe('strings-basic.js', function(){
             assert.strictEqual(StringsBasic.isPalindrome('Lorem'), false);
             assert.strictEqual(StringsBasic.isPalindrome('Ipsum'), false);
             assert.strictEqual(StringsBasic.isPalindrome('Dolor'), false);
-            assert.strictEqual(StringsBasic.isPalindrome('S0ippuakivikauppias'), true);
+            assert.strictEqual(StringsBasic.isPalindrome('S0ippuakivikauppias'), false);
         });
     });
 
