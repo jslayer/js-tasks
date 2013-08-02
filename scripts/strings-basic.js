@@ -4,7 +4,9 @@ var StringsBasic = {
      * @param {string} sub
      * @returns {number}
      */
-    subCount : function(str, sub) {},
+    subCount : function(str, sub) {
+        return str.toLowerCase().indexOf(sub.toLowerCase()) + 1;
+    },
 
     /**
      * @param {string} str
