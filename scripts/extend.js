@@ -1,7 +1,7 @@
 function extend(P, px, sx){
   var obj = P;
   obj.methodB = px.methodB;
-	obj.value = px.value;
-	obj.sMethodB = sx.sMethodB;
+  obj.initialize.value = px.initialize.value;
+  obj.sMethodB = sx.sMethodB;
 return obj;
 }
