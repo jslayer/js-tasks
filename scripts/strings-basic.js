@@ -14,13 +14,11 @@ var StringsBasic = {
      * @returns {Array,<string>}
      */
     wordsContains : function(str, sub) {
-        var array = str.split(" ");
+        var array = str.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(" ");
         var result = [];
-        var obj;
         for (var i in array) {
             if (array[i].toLowerCase().search(sub.toLowerCase()) != -1) {
-                obj = array[i].replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '_');
-                result.push(obj);
+                result.push(array[i]);
             }
         }
         return result;
