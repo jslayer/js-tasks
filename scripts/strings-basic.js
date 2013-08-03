@@ -46,7 +46,7 @@ var StringsBasic = {
         var array = str.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(" ");
         var result = [];
         for (var i in array) {
-            var letter = array[i].substr(1);
+            var letter = array[i].substr(0, 1);
             if (letter == letter.toUpperCase()) {
                 result.push(array[i]);
             }
