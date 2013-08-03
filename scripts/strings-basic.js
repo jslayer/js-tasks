@@ -57,5 +57,10 @@ var StringsBasic = {
      * @param {string} str
      * @returns {boolean}
      */
-    isPalindrome : function(str) {}
+    isPalindrome : function(str) {
+        if (str.toLowerCase() == str.split('').reverse().join('').toLowerCase()) {
+            return true;
+        }    
+        return false;
+    }
 };
