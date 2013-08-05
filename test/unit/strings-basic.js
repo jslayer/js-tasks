@@ -49,6 +49,12 @@ describe('strings-basic.js', function(){
             ), [
                 'Lorem'
             ]);
+
+            assert.deepEqual(StringsBasic.wordsContains(
+                'Lorem!Ipsum!Dolor', 'lorem'
+            ), [
+                'Lorem'
+            ]);
         });
     });
 
@@ -81,6 +87,12 @@ describe('strings-basic.js', function(){
             ), [
                 'ipsum', 'dolor'
             ]);
+
+            assert.deepEqual(StringsBasic.wordsNotContains(
+                'Lorem|ipsum|dolor', 'lorem'
+            ), [
+                'ipsum', 'dolor'
+            ]);
         });
     });
 
@@ -95,6 +107,10 @@ describe('strings-basic.js', function(){
             assert.deepEqual(StringsBasic.wordsBeginCapital('Hello Cruel world'), ['Hello', 'Cruel']);
 
             assert.deepEqual(StringsBasic.wordsBeginCapital('Hello cruel World'), ['Hello', 'World']);
+
+            assert.deepEqual(StringsBasic.wordsBeginCapital('Hello,Cruel_World'), ['Hello', 'Cruel']);
+
+            assert.deepEqual(StringsBasic.wordsBeginCapital('Hello,123'), ['Hello']);
         });
     });
 
