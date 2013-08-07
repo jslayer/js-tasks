@@ -14,13 +14,11 @@ var StringsBasic = {
 * @returns {Array,<string>}
 */
     wordsContains: function (str, sub) {
-        var array = ['test', 'test2'];
+        var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}]/g, " ").split(" ");
         var result = [];
         for (var i in array) {
-            if (array[i] != undefined) {
-                if (array[i].toLowerCase().search(sub.toLowerCase()) != -1) {
-                    result.push(array[i]);
-                }
+            if (array[i].toLowerCase().search(sub.toLowerCase()) != -1) {
+                result.push(array[i]);
             }
         }
         return result;
@@ -31,10 +29,10 @@ var StringsBasic = {
 * @returns {Array.<string>}
 */
     wordsNotContains: function (str, sub) {
-        var array = ['test', 'test2'];
+        var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}]/g, " ").split(" ");
         var result = [];
         for (var i in array) {
-            if (array[i].toLocaleLowerCase().search(sub.toLocaleLowerCase()) == -1) {
+            if (array[i].toLowerCase().search(sub.toLowerCase()) == -1) {
                 result.push(array[i]);
             }
         }
@@ -45,7 +43,7 @@ var StringsBasic = {
 * @returns {Array.<string>}
 */
     wordsBeginCapital: function (str) {
-        var array = ['test', 'test2'];
+        var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}0-9]/g, ' ').split(" ");
         var result = [];
         for (var i in array) {
             var letter = array[i].substr(0, 1);
