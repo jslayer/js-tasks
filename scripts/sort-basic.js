@@ -2,6 +2,10 @@ Array.prototype.sort = function(predicate) {
     var result = [],
         dirty = true;
 
+    if (!predicate) {
+        predicate = function(a, b) { return a - b; };
+    }
+
     while (dirty) {
         dirty = false;
         for (var i = 0; i < this.length - 1; i++) {
@@ -13,8 +17,7 @@ Array.prototype.sort = function(predicate) {
                     this[i + 1] = this[i];
                     this[i] = temp;
                     dirty = true;
-                } else {
-                }
+                } 
             }
         }
     }
