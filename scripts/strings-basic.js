@@ -14,7 +14,7 @@ var StringsBasic = {
 * @returns {Array,<string>}
 */
     wordsContains: function (str, sub) {
-        var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}]/g, " ").split(" ");
+        var array = str.replace(/[&\/\\#,+()$~%.'":*?!<>{}]/g, " ").split(" ");
         var result = [];
         for (var i in array) {
             if (array[i] != undefined) {
