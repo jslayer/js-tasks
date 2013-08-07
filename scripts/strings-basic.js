@@ -5,7 +5,7 @@ var StringsBasic = {
 * @returns {number}
 */
     subCount: function (str, sub) {
-        return str.toLocaleLowerCase().split(sub.toLocaleLowerCase()).length - 1;
+        return str.toLowerCase().split(sub.toLowerCase()).length - 1;
     },
 
     /**
@@ -58,7 +58,7 @@ var StringsBasic = {
 * @returns {boolean}
 */
     isPalindrome: function (str) {
-        if (str.toLowerCase() == str.split('').reverse().join('').toLocaleLowerCase()) {
+        if (str.toLowerCase() == str.split('').reverse().join('').toLowerCase()) {
             return true;
         }
         return false;
