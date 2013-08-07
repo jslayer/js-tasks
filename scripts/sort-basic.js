@@ -1,6 +1,5 @@
 Array.prototype.sort = function(predicate) {
-    var result = [],
-        dirty = true;
+    var dirty = true;
 
     if (!predicate) {
         predicate = function(a, b) { return a - b; };
@@ -21,4 +20,6 @@ Array.prototype.sort = function(predicate) {
             }
         }
     }
+
+    return this;
 };
