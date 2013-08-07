@@ -64,4 +64,3 @@ var StringsBasic = {
         return false;
     }
 };
-
