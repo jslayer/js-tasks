@@ -65,3 +65,4 @@ function testString() {
             return false;
         }
     };
+}
