@@ -5,7 +5,7 @@ var StringsBasic = {
 * @returns {number}
 */
     subCount: function (str, sub) {
-        return str.toLowerCase().split(sub.toLowerCase()).length - 1;
+        return str.toLocaleLowerCase().split(sub.toLocaleLowerCase()).length - 1;
     },
 
     /**
@@ -17,7 +17,7 @@ var StringsBasic = {
         var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}]/g, " ").split(" ");
         var result = [];
         for (var i in array) {
-            if (array[i].toLowerCase().search(sub.toLowerCase()) != -1) {
+            if (array[i].toLocaleLowerCase().search(sub.toLocaleLowerCase()) != -1) {
                 result.push(array[i]);
             }
         }
@@ -32,7 +32,7 @@ var StringsBasic = {
         var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}]/g, " ").split(" ");
         var result = [];
         for (var i in array) {
-            if (array[i].toLowerCase().search(sub.toLowerCase()) == -1) {
+            if (array[i].toLocaleLowerCase().search(sub.toLocaleLowerCase()) == -1) {
                 result.push(array[i]);
             }
         }
@@ -58,7 +58,7 @@ var StringsBasic = {
 * @returns {boolean}
 */
     isPalindrome: function (str) {
-        if (str.toLowerCase() == str.split('').reverse().join('').toLowerCase()) {
+        if (str.toLowerCase() == str.split('').reverse().join('').toLocaleLowerCase()) {
             return true;
         }
         return false;
