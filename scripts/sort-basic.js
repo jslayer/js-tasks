@@ -1,4 +1,4 @@
-Array.prototype.sort = function(predicate) {
+/*Array.prototype.sort = function(predicate) {
     var dirty = true;
 
     if (!predicate) {
@@ -22,4 +22,4 @@ Array.prototype.sort = function(predicate) {
     }
 
     return this;
-};
+};*/
