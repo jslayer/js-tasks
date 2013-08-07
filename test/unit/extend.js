@@ -82,7 +82,7 @@ describe('extend.js', function(){
         });
     });
 
-    describe('verify constructor replacement', function(){
+    /*describe('verify constructor replacement', function(){
         var A, B;
 
         beforeEach(function(){
@@ -110,7 +110,7 @@ describe('extend.js', function(){
 
             assert.strictEqual(b.value, 'Hello');
         });
-    });
+    });*/
 
     describe('working with constructor parameters', function(){
         var A, B, data;
