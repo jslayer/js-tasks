@@ -108,7 +108,7 @@ describe('strings-basic.js', function(){
 
             assert.deepEqual(StringsBasic.wordsBeginCapital('Hello cruel World'), ['Hello', 'World']);
 
-            assert.deepEqual(StringsBasic.wordsBeginCapital('Hello,Cruel_World'), ['Hello', 'Cruel']);
+            assert.deepEqual(StringsBasic.wordsBeginCapital('Hello,Cruel_World'), ['Hello', 'Cruel', 'World']);
 
             assert.deepEqual(StringsBasic.wordsBeginCapital('Hello,123'), ['Hello']);
         });
