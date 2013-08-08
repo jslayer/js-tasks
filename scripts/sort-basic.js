@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    Array.prototype.sort = function(predicate) {
+    Array.constructor.prototype.sort = function(predicate) {
         var dirty = true;
     
         if (!predicate) {
