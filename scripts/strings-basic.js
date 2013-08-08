@@ -14,7 +14,7 @@ var StringsBasic = {
 * @returns {Array,<string>}
 */
     wordsContains: function (str, sub) {
-        var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}]_/g, " ").split(" ");
+        var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}_]/g, " ").split(" ");
         var result = [];
         for (var i in array) {
             if (array[i].toLowerCase().search(sub.toLowerCase()) != -1) {
@@ -29,7 +29,7 @@ var StringsBasic = {
 * @returns {Array.<string>}
 */
     wordsNotContains: function (str, sub) {
-        var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}]_/g, " ").split(" ");
+        var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}_]/g, " ").split(" ");
         var result = [];
         for (var i in array) {
             if (array[i].toLowerCase().search(sub.toLowerCase()) == -1) {
