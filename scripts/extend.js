@@ -3,9 +3,11 @@ function extend(P, px, sx){
             P.call(this);
         };
 
-        obj = P;
-        obj.prototype = P.prototype;
-        obj.prototype.constructor = px.constructor;
+        var oldProt = function () { };
+        oldProt.prototype = P.prototype;
+        obj.prototype = new oldProt();
+        obj.prototype.constructor = obj;
+        obj.superclass = P.prototype;
 
         for (var i in px) {
             obj.prototype[i] = px[i];
