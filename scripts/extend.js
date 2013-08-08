@@ -25,11 +25,11 @@ function extend(P, px, sx){
             obj[idx] = sx[idx];
         }
 
-        /*for (var item in P) {
+        for (var item in P) {
             if (obj[item] == undefined) {
                 obj[item] = P[item];
             }
-        }*/
+        }
 
         return obj;
 }
