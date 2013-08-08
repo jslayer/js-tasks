@@ -17,9 +17,8 @@ var StringsBasic = {
         var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}]_/g, " ").split(" ");
         var result = [];
         for (var i in array) {
-            var arraiItem = array[i];
-            if (arraiItem.toString().toLowerCase().search(sub.toLowerCase()) != -1) {
-                result.push(array[i].toString());
+            if (array[i].toLowerCase().search(sub.toLowerCase()) != -1) {
+                result.push(array[i]);
             }
         }
         return result;
@@ -33,9 +32,8 @@ var StringsBasic = {
         var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}]_/g, " ").split(" ");
         var result = [];
         for (var i in array) {
-            var arraiItem = array[i];
-            if (arraiItem.toString().toLowerCase().search(sub.toLowerCase()) == -1) {
-                result.push(array[i].toString());
+            if (array[i].toLowerCase().search(sub.toLowerCase()) == -1) {
+                result.push(array[i]);
             }
         }
         return result;
@@ -48,9 +46,9 @@ var StringsBasic = {
         var array = str.replace(/[&\/|\\#,+()$~%.'":*?!<>{}0-9_]/g, ' ').split(" ");
         var result = [];
         for (var i in array) {
-            var letter = array[i].toString().substr(0, 1);
+            var letter = array[i].substr(0, 1);
             if (letter == letter.toUpperCase() && letter != '') {
-                result.push(array[i].toString());
+                result.push(array[i]);
             }
         }
         return result;
