@@ -3,7 +3,9 @@ function extend(P, px, sx){
             P.call(this);
         };
 
+        obj = P;
         obj.prototype = P.prototype;
+        obj.prototype.constructor = P.prototype.constructor;
 
         for (var i in px) {
             obj.prototype[i] = px[i];
