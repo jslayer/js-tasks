@@ -1,7 +1,5 @@
 function extend(P, px, sx){
-        var obj = function () {
-            P.call(this);
-        };
+        var obj = function () { };
 
         obj.prototype = new P();
 
@@ -29,4 +27,3 @@ function extend(P, px, sx){
 
         return obj;
 }
-//test
