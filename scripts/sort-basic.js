@@ -1,4 +1,3 @@
-"use strict";
 Array.prototype.sort = function(predicate) {
     var dirty = true;
 
