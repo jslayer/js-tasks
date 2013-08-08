@@ -19,7 +19,7 @@ var StringsBasic = {
         for (var i in array) {
             var arraiItem = array[i];
             if (arraiItem.toString().toLowerCase().search(sub.toLowerCase()) != -1) {
-                result.push(array[i]);
+                result.push(array[i].toString());
             }
         }
         return result;
@@ -35,7 +35,7 @@ var StringsBasic = {
         for (var i in array) {
             var arraiItem = array[i];
             if (arraiItem.toString().toLowerCase().search(sub.toLowerCase()) == -1) {
-                result.push(array[i]);
+                result.push(array[i].toString());
             }
         }
         return result;
@@ -50,7 +50,7 @@ var StringsBasic = {
         for (var i in array) {
             var letter = array[i].toString().substr(0, 1);
             if (letter == letter.toUpperCase() && letter != '') {
-                result.push(array[i]);
+                result.push(array[i].toString());
             }
         }
         return result;
