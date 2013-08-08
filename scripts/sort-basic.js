@@ -1,12 +1,13 @@
 (function () {
     "use strict";
-    Array.constructor.prototype.sort = function(predicate) {
+    var oldSort = Array.prototype.sort;
+    Array.prototype.sort = function(predicate) {
         var dirty = true;
-    
+
         if (!predicate) {
             predicate = function(a, b) { return a - b; };
         }
-    
+
         while (dirty) {
             dirty = false;
             for (var i = 0; i < this.length - 1; i++) {
@@ -22,7 +23,9 @@
                 }
             }
         }
-    
+
+        Array.prototype.sort = oldSort;
+
         return this;
     };
 }())
