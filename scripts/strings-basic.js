@@ -8,6 +8,8 @@ var StringsBasic = {
         var pos = 0;
         var counter = 0;
         
+        str = str.toLowerCase();
+
         while(true) {
             var foundPos = str.indexOf(sub, pos);
             if (foundPos == -1) break;
