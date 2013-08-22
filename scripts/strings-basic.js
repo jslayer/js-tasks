@@ -6,7 +6,7 @@ var StringsBasic = {
      */
     subCount : function(str, sub) {
         var pos = 0;
-        var ocunter = 0;
+        var counter = 0;
         
         while(true) {
             var foundPos = str.indexOf(sub, pos);
