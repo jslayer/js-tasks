@@ -5,20 +5,7 @@ var StringsBasic = {
      * @returns {number}
      */
     subCount : function(str, sub) {
-        var pos = 0;
-        var counter = 0;
-        
-        str = str.toLowerCase();
-
-        while(true) {
-            var foundPos = str.indexOf(sub, pos);
-            if (foundPos == -1) break;
-            else counter = counter + 1;
-            
-            pos = foundPos + 1;
-        }
-        
-        return counter;
+      
     },
 
     /**
