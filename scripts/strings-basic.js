@@ -5,7 +5,21 @@ var StringsBasic = {
      * @returns {number}
      */
     subCount : function(str, sub) {
-      
+        if( (arguments.length == 0) || (arguments.length == 1) || (arguments.length > 2) )  return str;
+
+        var pos = 0;
+        var counter = 0;
+
+        str = str.toLowerCase();
+        
+        while(true) {
+            var foundPos = str.indexOf(sub, pos);
+            if (foundPos == -1) break;
+            counter = counter + 1;
+            pos = foundPos + 1;
+        }
+        
+        return counter;
     },
 
     /**
@@ -13,7 +27,12 @@ var StringsBasic = {
      * @param {string} sub
      * @returns {Array,<string>}
      */
-    wordsContains : function(str, sub) {},
+    wordsContains : function(str, sub) {
+        if( (arguments.length == 0) || (arguments.length == 1) || (arguments.length > 2) )  return str;
+        var pattern = '\\w*' + sub + '\\w*';
+        var reg = new RegExp(pattern, 'gi');
+        return str.match(reg);
+    },
     /**
      * @param {string} str
      * @param {string} sub
@@ -24,10 +43,19 @@ var StringsBasic = {
      * @param {string} str
      * @returns {Array.<string>}
      */
-    wordsBeginCapital : function(str) {},
+    wordsBeginCapital : function(str) {
+        if( (arguments.length == 0) || (arguments.length > 1) )  return str;
+        var pattern = '[A-Z][a-z]*' ;
+        var reg = new RegExp(pattern, 'g');
+        return str.match(reg);
+    },
     /**
      * @param {string} str
      * @returns {boolean}
      */
-    isPalindrome : function(str) {}
+    isPalindrome : function(str) {
+        if( (arguments.length == 0) || (arguments.length > 1) ) return str;
+        str = str.toLowerCase();
+        return str === str.split("").reverse().join("");
+    }
 };
