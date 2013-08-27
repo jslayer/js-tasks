@@ -50,7 +50,7 @@ var StringsBasic = {
      */
     wordsBeginCapital : function(str) {
         if( (arguments.length == 0) || (arguments.length > 1) )  return str;
-        var pattern = '[A-Z][a-z]*' ;
+        var pattern = '[А-ЯЁA-Z][а-яёa-z]*' ;
         var reg = new RegExp(pattern, 'g');
         return str.match(reg) || [];
     },
