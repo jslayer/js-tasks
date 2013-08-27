@@ -6,19 +6,15 @@ var StringsBasic = {
      */
     subCount : function(str, sub) {
         if( (arguments.length == 0) || (arguments.length == 1) || (arguments.length > 2) )  return str;
-
         var pos = 0;
         var counter = 0;
-
         str = str.toLowerCase();
-        
         while(true) {
             var foundPos = str.indexOf(sub, pos);
             if (foundPos == -1) break;
             counter = counter + 1;
             pos = foundPos + 1;
         }
-        
         return counter;
     },
 
@@ -29,7 +25,7 @@ var StringsBasic = {
      */
     wordsContains : function(str, sub) {
         if( (arguments.length == 0) || (arguments.length == 1) || (arguments.length > 2) )  return str;
-        var pattern = '\\w*' + sub + '\\w*';
+        var pattern = '[а-яёa-z]*' + sub + '[а-яёa-z]*';
         var reg = new RegExp(pattern, 'gi');
         return str.match(reg);
     },
