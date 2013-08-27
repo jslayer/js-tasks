@@ -27,7 +27,7 @@ var StringsBasic = {
         if( (arguments.length == 0) || (arguments.length == 1) || (arguments.length > 2) )  return str;
         var pattern = '[а-яёa-z]*' + sub + '[а-яёa-z]*';
         var reg = new RegExp(pattern, 'gi');
-        return str.match(reg);
+        return str.match(reg) || [];
     },
     /**
      * @param {string} str
@@ -52,7 +52,7 @@ var StringsBasic = {
         if( (arguments.length == 0) || (arguments.length > 1) )  return str;
         var pattern = '[A-Z][a-z]*' ;
         var reg = new RegExp(pattern, 'g');
-        return str.match(reg);
+        return str.match(reg) || [];
     },
     /**
      * @param {string} str
