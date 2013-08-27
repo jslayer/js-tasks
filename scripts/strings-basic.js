@@ -38,7 +38,16 @@ var StringsBasic = {
      * @param {string} sub
      * @returns {Array.<string>}
      */
-    wordsNotContains : function(str, sub) {},
+    wordsNotContains : function(str, sub) {
+        if( (arguments.length == 0) || (arguments.length == 1) || (arguments.length > 2) ) return str;
+        var separator = '[а-яёa-z]';
+        var pattern = separator + '*' + sub + separator + '*';
+        var reg = new RegExp(pattern, 'gi');
+        var arr = str.replace(reg, '');
+        reg = new RegExp(separator + '+', 'gi');
+        arr = arr.match(reg)||[];
+        return arr;
+    },
     /**
      * @param {string} str
      * @returns {Array.<string>}
