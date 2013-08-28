@@ -1,5 +1,7 @@
 function extend(P, px, sx) {
-  var obj = function() {};
+  var obj = function() {
+    P.call(this);
+  };
   obj.prototype = new P;
   
   for(var i in px)
