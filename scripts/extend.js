@@ -8,7 +8,7 @@ function extend(P, px, sx) {
     obj.prototype[i] = px[i];
     
   for(var id in sx)
-    obj[i] = sx[i];
+    obj[id] = sx[id];
     
   return obj;
 }
