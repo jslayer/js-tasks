@@ -2,6 +2,7 @@ function extend(P, px, sx) {
   var obj = function() {
     P.call(this);
   };
+  
   obj.prototype = new P();
   
   for(var i in px)
@@ -9,6 +10,11 @@ function extend(P, px, sx) {
     
   for(var id in sx)
     obj[id] = sx[id];
+    
+  for(var ide in P) {
+    if(obj[ide] == undefined) 
+       obj[ide] = P[ide];
+  }
     
   return obj;
 }
