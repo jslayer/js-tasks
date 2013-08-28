@@ -2,7 +2,7 @@ function extend(P, px, sx) {
   var obj = function() {
     P.call(this);
   };
-  obj.prototype = new P;
+  obj.prototype = new P();
   
   for(var i in px)
     obj.prototype[i] = px[i];
