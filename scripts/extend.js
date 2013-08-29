@@ -9,8 +9,16 @@ function extend(P, px, sx) {
   obj.prototype.constructor = obj;
   obj.superclass = P.prototype;
   
-  for(var i in px)
+  for(var i in px) {
     obj.prototype[i] = px[i];
+    
+    if (i == 'constructor') {
+      var proto = obj.prototype;
+      obj = px[i];
+      obj.prototype = proto;
+      obj.prototype.constructor = obj;
+    }
+  }
     
   for(var id in sx)
     obj[id] = sx[id];
